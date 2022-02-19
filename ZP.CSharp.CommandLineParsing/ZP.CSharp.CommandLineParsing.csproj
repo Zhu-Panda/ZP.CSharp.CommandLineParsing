@@ -4,10 +4,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>ZP.CSharp.CommandLineParsing</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.1.1</Version>
         <Authors>Zhu Panda</Authors>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22106.2" />
+        <PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22111.2" />
     </ItemGroup>
 </Project>

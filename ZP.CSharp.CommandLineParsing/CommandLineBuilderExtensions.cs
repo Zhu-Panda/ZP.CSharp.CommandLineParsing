@@ -7,6 +7,16 @@ namespace ZP.CSharp.CommandLineParsing
     {
         public static CommandLineBuilder UseDefaultsWithCustomHelpAndVersionOpts(
             this CommandLineBuilder builder,
+            string helpAlias,
+            string versionAlias)
+        {
+            return builder.UseDefaultsWithCustomHelpAndVersionOpts(
+                new string[]{helpAlias},
+                new string[]{versionAlias}
+            );
+        }
+        public static CommandLineBuilder UseDefaultsWithCustomHelpAndVersionOpts(
+            this CommandLineBuilder builder,
             string[] helpAliases,
             string[] versionAliases)
         {
@@ -24,6 +34,12 @@ namespace ZP.CSharp.CommandLineParsing
         }
         public static CommandLineBuilder UseDefaultsWithCustomHelpOpts(
             this CommandLineBuilder builder,
+            string helpAlias)
+        {
+            return builder.UseDefaultsWithCustomHelpOpts(new string[]{helpAlias});
+        }
+        public static CommandLineBuilder UseDefaultsWithCustomHelpOpts(
+            this CommandLineBuilder builder,
             string[] helpAliases)
         {
             return builder
@@ -37,6 +53,12 @@ namespace ZP.CSharp.CommandLineParsing
                 .UseParseErrorReporting()
                 .UseExceptionHandler()
                 .CancelOnProcessTermination();
+        }
+         public static CommandLineBuilder UseDefaultsWithCustomVersionOpts(
+            this CommandLineBuilder builder,
+            string versionAlias)
+        {
+            return builder.UseDefaultsWithCustomVersionOpts(new string[]{versionAlias});
         }
         public static CommandLineBuilder UseDefaultsWithCustomVersionOpts(
             this CommandLineBuilder builder,
